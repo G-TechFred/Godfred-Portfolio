@@ -51,13 +51,13 @@ function App() {
               </div>
             </div>
 
-            {/* Profile Picture */}
+            {/* Profile Picture with Face Framing Fixed */}
             <div style={{ flexShrink: 0, textAlign: "center", margin: "0 auto" }}>
-              <div style={{ width: "170px", height: "170px", borderRadius: "50%", overflow: "hidden", border: "4px solid #e2e8f0", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }}>
+              <div style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", border: "4px solid #e2e8f0", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }}>
                 <img 
                   src="/Profile.jpg" 
                   alt="Godfred Mensah" 
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} 
                 />
               </div>
             </div>
