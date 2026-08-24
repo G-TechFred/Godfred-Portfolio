@@ -1,4 +1,3 @@
-"build": "vite build"
 const experience = [
   {
     number: "01",
@@ -124,7 +123,7 @@ function App() {
               <p className="hero-description">
                 I am an education and management professional with experience
                 spanning administration, research, data analysis, technology,
-                project coordination and process improvement.
+                project coordination, and process improvement.
               </p>
 
               <p className="hero-description secondary-copy">
@@ -262,7 +261,7 @@ function App() {
 
               <p>
                 My background sits at the intersection of education,
-                administration, research, data and technology.
+                administration, research, data, and technology.
               </p>
 
             </div>
@@ -281,7 +280,7 @@ function App() {
                 <p>
                   My professional experiences have taught me that good
                   decisions depend on good information. Whether working with
-                  administrative records, student data, research findings or
+                  administrative records, student data, research findings, or
                   organizational performance, I am interested in transforming
                   information into actionable insights.
                 </p>
@@ -310,7 +309,7 @@ function App() {
                   <span>03</span>
                   <h3>Impact</h3>
                   <p>
-                    I focus on solutions that improve people, processes and
+                    I focus on solutions that improve people, processes, and
                     organizations.
                   </p>
                 </div>
@@ -342,7 +341,7 @@ function App() {
 
               <p>
                 Professional experiences across public administration,
-                education, technology and digital business.
+                education, technology, and digital business.
               </p>
 
             </div>
@@ -375,7 +374,7 @@ function App() {
                   </div>
 
                   <div className="experience-arrow">
-                    ↗
+                    ↗️
                   </div>
 
                 </article>
@@ -441,7 +440,7 @@ function App() {
 
                   <div className="research-footer">
                     <span>Research & Evaluation</span>
-                    <span>↗</span>
+                    <span>↗️</span>
                   </div>
 
                 </article>
@@ -512,7 +511,7 @@ function App() {
 
                 <div className="project-link">
                   <span>Educational Technology</span>
-                  <span>↗</span>
+                  <span>↗️</span>
                 </div>
 
               </div>
@@ -601,7 +600,7 @@ function App() {
                 <h3>Data Analysis & Visualization</h3>
 
                 <p>
-                  Using Power BI, Tableau, SQL, SPSS and Excel to transform
+                  Using Power BI, Tableau, SQL, SPSS, and Excel to transform
                   datasets into meaningful insights and visual reports.
                 </p>
 
@@ -614,7 +613,7 @@ function App() {
                 <h3>Workflow Automation</h3>
 
                 <p>
-                  Designing automated workflows with Power Automate, Zapier
+                  Designing automated workflows with Power Automate, Zapier,
                   and Make.com to reduce repetitive administrative work.
                 </p>
 
@@ -628,7 +627,7 @@ function App() {
 
                 <p>
                   Using Qualtrics and structured research methods to support
-                  survey design, information gathering and data collection.
+                  survey design, information gathering, and data collection.
                 </p>
 
                 <strong>Research · Surveys · Evaluation →</strong>
@@ -657,7 +656,7 @@ function App() {
 
               <p>
                 Beyond technical skills, I value teamwork, communication,
-                responsibility and service.
+                responsibility, and service.
               </p>
 
             </div>
@@ -673,7 +672,7 @@ function App() {
 
                   <p>
                     Coordinated research activities, project timelines, survey
-                    distribution and data collection workflows.
+                    distribution, and data collection workflows.
                   </p>
                 </div>
               </article>
@@ -716,7 +715,7 @@ function App() {
               </div>
 
               <p>
-                A combination of analytical, research, technological and
+                A combination of analytical, research, technological, and
                 professional skills developed through academic and practical
                 experience.
               </p>
@@ -810,7 +809,7 @@ function App() {
               className="resume-button"
             >
               <span>View / Download CV</span>
-              <strong>↗</strong>
+              <strong>↗️</strong>
             </a>
 
           </div>
@@ -844,27 +843,27 @@ function App() {
 
             <div className="contact-links">
 
-              <a href="mailto:godfredmens78@gmail.com">
+              <a href="mailto:YOUR_EMAIL@example.com">
                 <span>Email</span>
-                <strong>↗</strong>
+                <strong>↗️</strong>
               </a>
 
               <a
-                href="https://github.com/G-TechFredE"
+                href="https://github.com/YOUR-GITHUB-USERNAME"
                 target="_blank"
                 rel="noreferrer"
               >
                 <span>GitHub</span>
-                <strong>↗</strong>
+                <strong>↗️</strong>
               </a>
 
               <a
-                href="https://www.linkedin.com/in/godfred-mensah1"
+                href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
                 target="_blank"
                 rel="noreferrer"
               >
                 <span>LinkedIn</span>
-                <strong>↗</strong>
+                <strong>↗️</strong>
               </a>
 
             </div>
@@ -889,7 +888,7 @@ function App() {
           </div>
 
           <p>
-            © {new Date().getFullYear()} Godfred Mensah. All rights reserved.
+            ©️ {new Date().getFullYear()} Godfred Mensah. All rights reserved.
           </p>
 
           <a href="#home">
