@@ -23,7 +23,7 @@ function App() {
       <main>
         {/* Hero */}
         <section id="home" className="hero">
-          <div className="container hero-content" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2rem", flexWrap: "wrap" }}>
+          <div className="container hero-content" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2.5rem", flexWrap: "wrap-reverse" }}>
             
             <div style={{ flex: "1 1 350px" }}>
               <p className="eyebrow">PROFESSIONAL PORTFOLIO</p>
@@ -53,7 +53,7 @@ function App() {
 
             {/* Profile Picture */}
             <div style={{ flexShrink: 0, textAlign: "center", margin: "0 auto" }}>
-              <div style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", border: "4px solid #e2e8f0", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }}>
+              <div style={{ width: "170px", height: "170px", borderRadius: "50%", overflow: "hidden", border: "4px solid #e2e8f0", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }}>
                 <img 
                   src="/Profile.jpg" 
                   alt="Godfred Mensah" 
