@@ -345,7 +345,7 @@ function App() {
               </a>
 
               <a
-                href="https://github.com/godfred-mensah1"
+                href="https://github.com/G-TechFred"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -353,7 +353,7 @@ function App() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/G-TechFred"
+                href="https://www.linkedin.com/in/godfred-mensah1"
                 target="_blank"
                 rel="noreferrer"
               >
