@@ -23,30 +23,45 @@ function App() {
       <main>
         {/* Hero */}
         <section id="home" className="hero">
-          <div className="container hero-content">
-            <p className="eyebrow">PROFESSIONAL PORTFOLIO</p>
+          <div className="container hero-content" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2rem", flexWrap: "wrap" }}>
+            
+            <div style={{ flex: "1 1 350px" }}>
+              <p className="eyebrow">PROFESSIONAL PORTFOLIO</p>
 
-            <h1>
-              Management
-              <br />
-              <span>Research & Evaluation · Data & Technology</span>
-            </h1>
+              <h1>
+                Management
+                <br />
+                <span>Research & Evaluation · Data & Technology</span>
+              </h1>
 
-            <p className="hero-description">
-              Education and management professional with experience in
-              administration, research, data analysis, project coordination
-              and technology-enabled process improvement.
-            </p>
+              <p className="hero-description">
+                Education and management professional with experience in
+                administration, research, data analysis, project coordination,
+                and technology-enabled process improvement.
+              </p>
 
-            <div className="hero-buttons">
-              <a href="#projects" className="button primary">
-                View My Work
-              </a>
+              <div className="hero-buttons">
+                <a href="#projects" className="button primary">
+                  View My Work
+                </a>
 
-              <a href="#contact" className="button secondary">
-                Get in Touch
-              </a>
+                <a href="#contact" className="button secondary">
+                  Get in Touch
+                </a>
+              </div>
             </div>
+
+            {/* Profile Picture */}
+            <div style={{ flexShrink: 0, textAlign: "center", margin: "0 auto" }}>
+              <div style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", border: "4px solid #e2e8f0", boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1)" }}>
+                <img 
+                  src="/Profile.jpg" 
+                  alt="Godfred Mensah" 
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                />
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -61,15 +76,15 @@ function App() {
               <p>
                 I have a background in education and management, with
                 professional experience in administration, research, data
-                analysis and project coordination.
+                analysis, and project coordination.
               </p>
 
               <p>
                 My work has involved using data and digital tools to improve
-                administrative processes, monitor performance and support
+                administrative processes, monitor performance, and support
                 informed decision-making. I am particularly interested in
                 program evaluation, organizational performance, public
-                administration and community-focused initiatives.
+                administration, and community-focused initiatives.
               </p>
             </div>
           </div>
@@ -95,7 +110,7 @@ function App() {
                   quantitative analysis and Power BI to pension calculations
                   and financial reporting. Managed digital records and
                   tracking systems for 120+ vital records, supporting accuracy,
-                  consistency and administrative efficiency.
+                  consistency, and administrative efficiency.
                 </p>
               </article>
 
@@ -140,7 +155,7 @@ function App() {
                 </p>
 
                 <h3>
-                  Business Management Teachers' Classroom Management Styles & Student Engagement
+                  Classroom Management Styles & Student Engagement
                 </h3>
 
                 <p>
@@ -152,9 +167,10 @@ function App() {
               </article>
 
               <article className="card">
-                <p className="card-label">U-Splash Mineral Water Company - Cape Coast</p>
+                <p className="card-label">U-Splash Mineral Water Company</p>
 
                 <h3>Organizational Performance Review</h3>
+
                 <p>
                   Conducted an organizational diagnostic study examining
                   management and performance challenges. Applied quantitative
@@ -202,7 +218,7 @@ function App() {
                 <h3>Data Analysis & Visualization</h3>
 
                 <p>
-                  Projects involving Power BI, Tableau, SQL, SPSS and Excel
+                  Projects involving Power BI, Tableau, SQL, SPSS, and Excel
                   for analyzing and presenting data.
                 </p>
               </article>
@@ -221,7 +237,7 @@ function App() {
 
                 <p>
                   Experience with Qualtrics for survey design, research data
-                  collection and structured information gathering.
+                  collection, and structured information gathering.
                 </p>
               </article>
             </div>
@@ -243,7 +259,7 @@ function App() {
 
                 <p>
                   Coordinated research activities, including project
-                  timelines, survey distribution and data collection
+                  timelines, survey distribution, and data collection
                   workflows.
                 </p>
               </article>
@@ -375,4 +391,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
