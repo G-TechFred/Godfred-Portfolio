@@ -1,5 +1,4 @@
-import React from 'react';
-
+Typescript
 const experience = [
   {
     number: "01",
