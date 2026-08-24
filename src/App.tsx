@@ -34,7 +34,7 @@ function App() {
 
             <p className="hero-description">
               Education and management professional with experience in
-              administration, research, data analysis, project coordination,
+              administration, research, data analysis, project coordination
               and technology-enabled process improvement.
             </p>
 
@@ -61,15 +61,15 @@ function App() {
               <p>
                 I have a background in education and management, with
                 professional experience in administration, research, data
-                analysis, and project coordination.
+                analysis and project coordination.
               </p>
 
               <p>
                 My work has involved using data and digital tools to improve
-                administrative processes, monitor performance, and support
+                administrative processes, monitor performance and support
                 informed decision-making. I am particularly interested in
                 program evaluation, organizational performance, public
-                administration, and community-focused initiatives.
+                administration and community-focused initiatives.
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ function App() {
                   quantitative analysis and Power BI to pension calculations
                   and financial reporting. Managed digital records and
                   tracking systems for 120+ vital records, supporting accuracy,
-                  consistency, and administrative efficiency.
+                  consistency and administrative efficiency.
                 </p>
               </article>
 
@@ -140,7 +140,7 @@ function App() {
                 </p>
 
                 <h3>
-                  Classroom Management Styles & Student Engagement
+                  Business Management Teachers' Classroom Management Styles & Student Engagement
                 </h3>
 
                 <p>
@@ -152,10 +152,9 @@ function App() {
               </article>
 
               <article className="card">
-                <p className="card-label">U-Splash Mineral Water Company</p>
+                <p className="card-label">U-Splash Mineral Water Company - Cape Coast</p>
 
                 <h3>Organizational Performance Review</h3>
-
                 <p>
                   Conducted an organizational diagnostic study examining
                   management and performance challenges. Applied quantitative
@@ -203,7 +202,7 @@ function App() {
                 <h3>Data Analysis & Visualization</h3>
 
                 <p>
-                  Projects involving Power BI, Tableau, SQL, SPSS, and Excel
+                  Projects involving Power BI, Tableau, SQL, SPSS and Excel
                   for analyzing and presenting data.
                 </p>
               </article>
@@ -222,7 +221,7 @@ function App() {
 
                 <p>
                   Experience with Qualtrics for survey design, research data
-                  collection, and structured information gathering.
+                  collection and structured information gathering.
                 </p>
               </article>
             </div>
@@ -244,7 +243,7 @@ function App() {
 
                 <p>
                   Coordinated research activities, including project
-                  timelines, survey distribution, and data collection
+                  timelines, survey distribution and data collection
                   workflows.
                 </p>
               </article>
