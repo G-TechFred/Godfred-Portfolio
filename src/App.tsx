@@ -1,4 +1,4 @@
-Typescript
+"build": "vite build"
 const experience = [
   {
     number: "01",
