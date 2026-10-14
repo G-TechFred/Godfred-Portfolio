@@ -1,13 +1,161 @@
 import React from 'react';
 import './index.css';
 
+type Project = {
+  status: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  images: {
+    src: string;
+    alt: string;
+    caption: string;
+  }[];
+};
+
+const projects: Project[] = [
+  {
+    status: 'In Development',
+    title: 'First-Year Student Mentorship & Peer Advising Platform',
+    description:
+      'Developing a digital platform designed to match first-year students with senior peer mentors based on academic majors and career interests. The platform is intended to support student onboarding, mentoring activities, and feedback collection through organized digital workflows.',
+    technologies: ['Supabase', 'Web Workflows', 'Dashboards'],
+    images: [
+      {
+        src: '/mentorship-dashboard.jpg',
+        alt: 'Student mentorship platform dashboard',
+        caption: 'Platform Dashboard',
+      },
+      {
+        src: '/mentorship-2.jpg',
+        alt: 'Student mentorship platform interface',
+        caption: 'Platform Interface',
+      },
+      {
+        src: '/mentorship-3.jpg',
+        alt: 'Student mentor matching interface',
+        caption: 'Mentor Matching',
+      },
+      {
+        src: '/mentorship-4.jpg',
+        alt: 'Student mentorship tracking interface',
+        caption: 'Mentorship Tracking',
+      },
+    ],
+  },
+  {
+    status: 'Completed',
+    title: 'Student Affairs Program Assessment & Feedback Pipeline',
+    description:
+      'Designed an assessment workflow for collecting and organizing student feedback after workshops and campus activities. The project demonstrates how survey responses, satisfaction measures, and reporting dashboards can support program review and evidence-informed administrative decisions.',
+    technologies: [
+      'Google Forms',
+      'Google Sheets',
+      'Looker Studio',
+      'Apps Script',
+    ],
+    images: [
+      {
+        src: '/survey-1.jpg',
+        alt: 'Student program assessment survey',
+        caption: 'Feedback Survey',
+      },
+      {
+        src: '/survey-2.jpg',
+        alt: 'Student survey response collection',
+        caption: 'Response Collection',
+      },
+      {
+        src: '/survey-3.jpg',
+        alt: 'Student feedback data organization',
+        caption: 'Data Organization',
+      },
+      {
+        src: '/survey-4.jpg',
+        alt: 'Student program assessment report',
+        caption: 'Assessment Report',
+      },
+    ],
+  },
+  {
+    status: 'Completed',
+    title: 'Automated Student Service Request Workflow',
+    description:
+      'Developed a student service request workflow using online forms and automation tools to capture requests and organize records for follow-up. The project explores how digital processes can reduce repetitive administrative tasks and improve request tracking, departmental coordination, and communication.',
+    technologies: [
+      'Zapier',
+      'Google Sheets',
+      'Workflow Automation',
+    ],
+    images: [
+      {
+        src: '/request-workflow.jpg',
+        alt: 'Student service request workflow overview',
+        caption: 'Workflow Overview',
+      },
+      {
+        src: '/request-2.jpg',
+        alt: 'Student service request submission form',
+        caption: 'Request Form',
+      },
+      {
+        src: '/request-3.jpg',
+        alt: 'Student service request records',
+        caption: 'Request Records',
+      },
+      {
+        src: '/request-4.jpg',
+        alt: 'Student service request processing workflow',
+        caption: 'Request Processing',
+      },
+    ],
+  },
+  {
+    status: 'In Development',
+    title: 'Student Performance Tracking Application',
+    description:
+      'Building a web application for recording continuous assessments and term results using applicable Ghana Education Service grading standards. The application focuses on organizing student records and presenting performance summaries to support progress monitoring and informed educational decisions.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Supabase',
+    ],
+    images: [
+      {
+        src: '/tracker-app.jpg',
+        alt: 'Student performance tracking dashboard',
+        caption: 'Performance Dashboard',
+      },
+      {
+        src: '/tracker-2.jpg',
+        alt: 'Student performance records interface',
+        caption: 'Student Records',
+      },
+      {
+        src: '/tracker-3.jpg',
+        alt: 'Student assessment results interface',
+        caption: 'Assessment Results',
+      },
+      {
+        src: '/tracker-4.jpg',
+        alt: 'Student academic progress report',
+        caption: 'Progress Report',
+      },
+    ],
+  },
+];
+
 export default function App() {
   return (
     <div className="app-container">
       {/* Navigation */}
       <nav className="navbar">
         <div className="container nav-content">
-          <div className="logo">Godfred Mensah</div>
+          <a href="#home" className="logo">
+            Godfred Mensah
+          </a>
+
           <div className="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -19,18 +167,30 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <header className="hero">
+      <header id="home" className="hero">
         <div className="container hero-content">
           <div className="eyebrow">Professional Portfolio</div>
+
           <h1>
-            Management Research & Evaluation <span>& Data Technology</span>
+            Public Administration, Research
+            <span> &amp; Data Technology</span>
           </h1>
+
           <p className="hero-description">
-            Education and management professional with experience in administration, research, data analysis, project coordination, and technology-enabled process improvement.
+            Education and business management professional with
+            experience in administrative analysis, research, data
+            analysis, workflow automation, and technology-enabled
+            process improvement.
           </p>
+
           <div className="hero-buttons">
-            <a href="#projects" className="button primary">Explore Projects</a>
-            <a href="#contact" className="button secondary">Get in Touch</a>
+            <a href="#projects" className="button primary">
+              Explore Projects
+            </a>
+
+            <a href="#contact" className="button secondary">
+              Get in Touch
+            </a>
           </div>
         </div>
       </header>
@@ -39,105 +199,300 @@ export default function App() {
       <section id="experience" className="section">
         <div className="container">
           <div className="eyebrow">Experience</div>
-          <h2>Professional background</h2>
+
+          <h2>Professional Background</h2>
+
           <div className="cards two-cards">
-            <div className="card">
-              <span className="card-label">Controller & Accountant-General's Department</span>
-              <h3>Administrative Analyst</h3>
-              <p>
-                Worked within the Pensions Computation Unit, applying quantitative analysis and Power BI to pension calculations and financial reporting. Managed digital records and tracking systems for 120+ vital records, supporting accuracy, consistency, and administrative efficiency.
-              </p>
-            </div>
-            <div className="card">
-              <span className="card-label">Oye Ride</span>
+            <article className="card">
+              <span className="card-label">
+                Oye Ride · Logistics and Mobility
+              </span>
+
               <h3>Growth Marketing Lead</h3>
+
               <p>
-                Developed and managed digital campaigns while monitoring engagement and conversion metrics to scale user acquisition and brand visibility.
+                Tracks daily user sign-ups and customer feedback to
+                understand customer preferences and identify areas
+                for improvement. Works with field teams on promotional
+                activities designed to increase app engagement,
+                registrations, and ride bookings.
               </p>
-            </div>
-            <div className="card">
-              <span className="card-label">Omega School</span>
-              <h3>ICT Tutor</h3>
+            </article>
+
+            <article className="card">
+              <span className="card-label">
+                Controller and Accountant-General&apos;s Department
+              </span>
+
+              <h3>Administrative Analyst</h3>
+
               <p>
-                Provided structured instructional background in Information and Communication Technology, fostering digital literacy and foundational tech skills for students.
+                Calculated complex pension benefits and maintained
+                organized digital records for government pension
+                documentation. Reviewed supporting documents for
+                accuracy, tracked pending files, and supported
+                administrative follow-up and records management.
               </p>
-            </div>
-            <div className="card">
-              <span className="card-label">University of Cape Coast</span>
-              <h3>Research Team Lead</h3>
+            </article>
+
+            <article className="card">
+              <span className="card-label">
+                Ngleshie Amanfro Senior High
+              </span>
+
+              <h3>Applied Teaching Practicum</h3>
+
               <p>
-                Led an undergraduate thesis investigating business management teacher and student engagement dynamics, successfully completed in 2024.
+                Delivered Business Management lessons using class
+                discussions and group activities to encourage student
+                participation. Organized classroom quizzes and tracked
+                student scores to identify learning needs and provide
+                targeted support.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="section light-section">
+      <section
+        id="projects"
+        className="section light-section projects-section"
+      >
         <div className="container">
-          <div className="eyebrow">Innovation</div>
-          <h2>Featured development project</h2>
-          <div className="featured-project">
-            <div className="project-status">In Progress • Active Build</div>
-            <h3>Automated Student Performance Tracker</h3>
-            <p>
-              Designing a comprehensive tracking application tailored to align seamlessly with the Ghana Education Service grading framework, built using modern web architectures.
-            </p>
-            <div className="technology-list">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Tailwind CSS</span>
-              <span>Supabase</span>
-              <span>VS Code</span>
-              <span>GitHub</span>
-            </div>
+          <div className="eyebrow">Selected Work</div>
+
+          <h2>Projects in Administration, Research &amp; Technology</h2>
+
+          <p className="projects-intro">
+            Practical projects exploring how digital systems, data
+            analysis, and process improvement can support student
+            services, program evaluation, and better administrative
+            decisions.
+          </p>
+
+          <div className="project-grid">
+            {projects.map((project, index) => (
+              <article
+                className="card project-card"
+                key={project.title}
+              >
+                <div className="project-heading">
+                  <span className="card-label">
+                    {project.status}
+                  </span>
+
+                  <h3>{project.title}</h3>
+                </div>
+
+                <p className="project-description">
+                  {project.description}
+                </p>
+
+                <div
+                  className="technology-list"
+                  aria-label="Project technologies"
+                >
+                  {project.technologies.map((technology) => (
+                    <span key={technology}>{technology}</span>
+                  ))}
+                </div>
+
+                <div
+                  className="project-gallery"
+                  aria-label={`${project.title} screenshots`}
+                >
+                  {project.images.map((image, imageIndex) => (
+                    <a
+                      className="gallery-item"
+                      href={image.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${image.caption} image for ${project.title}`}
+                      key={image.src}
+                    >
+                      <div className="gallery-image-wrapper">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          loading="lazy"
+                          decoding="async"
+                        />
+
+                        <span className="image-zoom">
+                          View image ↗
+                        </span>
+                      </div>
+
+                      <span className="gallery-image-caption">
+                        <span className="image-number">
+                          {String(imageIndex + 1).padStart(2, '0')}
+                        </span>
+
+                        {image.caption}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+
+                <div className="project-footer">
+                  <span className="project-number">
+                    PROJECT {String(index + 1).padStart(2, '0')}
+                  </span>
+
+                  <span className="project-image-count">
+                    {project.images.length} screenshots
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education and Research Section */}
+      <section id="about" className="section">
+        <div className="container">
+          <div className="eyebrow">Background</div>
+
+          <h2>Education &amp; Research Experience</h2>
+
+          <div className="cards two-cards">
+            <article className="card">
+              <span className="card-label">
+                University of Cape Coast
+              </span>
+
+              <h3>Bachelor of Education in Business Management</h3>
+
+              <p>
+                Completed undergraduate studies with a final-year
+                research project examining Business Management
+                teachers&apos; classroom management styles and
+                students&apos; engagement in the Cape Coast Metropolis.
+                Used SPSS to support quantitative data analysis.
+              </p>
+            </article>
+
+            <article className="card">
+              <span className="card-label">
+                U-Splash Mineral Water Company
+              </span>
+
+              <h3>Organizational Performance Review</h3>
+
+              <p>
+                Conducted an organizational diagnostic field study
+                examining sales management issues. Organized records
+                in Excel, developed Tableau visualizations to examine
+                sales trends, and proposed practical performance
+                improvement strategies.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="section">
+      <section id="skills" className="section light-section">
         <div className="container">
           <div className="eyebrow">Expertise</div>
-          <h2>Technical & analytical stack</h2>
+
+          <h2>Analytical, Research &amp; Technology Skills</h2>
+
           <div className="skills-grid">
-            <div className="skill-group">
-              <h3>Data & Analytics</h3>
-              <p>Python, SQL/MySQL, Tableau, Power BI, quantitative data evaluation, and financial reporting.</p>
-            </div>
-            <div className="skill-group">
-              <h3>Web Development</h3>
-              <p>React, TypeScript, Tailwind CSS, Supabase, Git, GitHub, and modern component design.</p>
-            </div>
-            <div className="skill-group">
-              <h3>Management & Research</h3>
-              <p>Administrative workflows, process tracking, educational coordination, and academic research leadership.</p>
-            </div>
+            <article className="skill-group">
+              <h3>Data &amp; Analysis</h3>
+              <p>
+                Power BI, SQL (MySQL), Tableau, SPSS, and Advanced
+                Excel.
+              </p>
+            </article>
+
+            <article className="skill-group">
+              <h3>Workflow &amp; Process Improvement</h3>
+              <p>
+                Zapier, Make.com, workflow design, and administrative
+                process improvement.
+              </p>
+            </article>
+
+            <article className="skill-group">
+              <h3>Research &amp; Data Collection</h3>
+              <p>
+                Qualtrics, Zotero, survey design, field data
+                collection, and quantitative analysis.
+              </p>
+            </article>
+
+            <article className="skill-group">
+              <h3>Web &amp; Digital Tools</h3>
+              <p>
+                React, TypeScript, Tailwind CSS, VS Code, GitHub,
+                Vercel, and Supabase.
+              </p>
+            </article>
+
+            <article className="skill-group">
+              <h3>Project &amp; Team Management</h3>
+              <p>
+                Asana, Trello, Google Sheets, and Microsoft 365.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section light-section">
+      <section id="contact" className="section contact-section">
         <div className="container">
           <div className="eyebrow">Connect</div>
-          <h2>Let's build something exceptional together.</h2>
+
+          <h2>Let&apos;s Build Something Meaningful</h2>
+
           <p className="contact-text">
-            Whether you are looking to discuss management research, data technology solutions, or graduate opportunities, my inbox is always open.
+            I am interested in opportunities and collaborations
+            involving public administration, educational development,
+            research, program evaluation, data analysis, and
+            technology-enabled process improvement.
           </p>
+
           <div className="contact-links">
-            <a href="mailto:godfred@example.com">Send Email</a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Network</a>
+            <a
+              href="mailto:godfredmens78@gmail.com"
+              className="contact-button email-button"
+            >
+              Email Me ↗
+            </a>
+
+            <a
+              href="https://github.com/G-TechFred"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-button github-button"
+            >
+              GitHub Profile ↗
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/godfred-mensah1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-button linkedin-button"
+            >
+              LinkedIn Profile ↗
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer>
+      <footer className="footer">
         <div className="container">
-          <p>© 2026 Godfred Mensah. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Godfred Mensah. All rights
+            reserved.
+          </p>
         </div>
       </footer>
     </div>
