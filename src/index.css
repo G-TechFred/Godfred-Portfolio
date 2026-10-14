@@ -597,7 +597,10 @@ p {
   line-height: 1.9;
 }
 
-/* Contact button layout */
+
+/* =========================================
+   CONTACT BUTTON LAYOUT
+========================================= */
 
 .contact-links {
   display: flex;
@@ -607,7 +610,10 @@ p {
   margin-top: 28px;
 }
 
-/* Shared button styling */
+
+/* =========================================
+   SHARED CONTACT BUTTON STYLING
+========================================= */
 
 .contact-button {
   display: inline-flex;
@@ -633,14 +639,15 @@ p {
     box-shadow 0.2s ease;
 }
 
-/* Subtle movement on hover */
-
 .contact-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 14px rgba(15, 35, 65, 0.14);
 }
 
-/* Email button */
+
+/* =========================================
+   EMAIL BUTTON
+========================================= */
 
 .email-button {
   background-color: #2563eb;
@@ -654,7 +661,10 @@ p {
   color: #ffffff;
 }
 
-/* GitHub button */
+
+/* =========================================
+   GITHUB BUTTON
+========================================= */
 
 .github-button {
   background-color: #24292f;
@@ -668,7 +678,10 @@ p {
   color: #ffffff;
 }
 
-/* LinkedIn button */
+
+/* =========================================
+   LINKEDIN BUTTON
+========================================= */
 
 .linkedin-button {
   background-color: #0a66c2;
@@ -682,12 +695,38 @@ p {
   color: #ffffff;
 }
 
-/* Keyboard accessibility */
+
+/* =========================================
+   DOWNLOAD MY CV BUTTON
+========================================= */
+
+.cv-button {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+.cv-button:hover {
+  background-color: #1e426b;
+  border-color: #1e426b;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CONTACT BUTTON ACCESSIBILITY
+========================================= */
 
 .contact-button:focus-visible {
   outline: 3px solid #60a5fa;
   outline-offset: 4px;
 }
+
+.cv-button:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 4px;
+}
+
 
 /* Avoid hover movement on touch devices */
 
@@ -718,7 +757,7 @@ p {
 
 
 /* =========================================
-   ACCESSIBILITY
+   GENERAL ACCESSIBILITY
 ========================================= */
 
 a:focus-visible {
@@ -870,7 +909,7 @@ a:focus-visible {
     align-items: flex-start;
   }
 
-  /* Stack contact buttons on smaller screens */
+  /* Stack all four contact buttons on mobile */
 
   .contact-links {
     align-items: stretch;
@@ -881,6 +920,8 @@ a:focus-visible {
   .contact-button {
     width: 100%;
     box-sizing: border-box;
+    min-height: 52px;
+    font-size: 0.95rem;
   }
 }
 

@@ -1,4 +1,3 @@
-
 import './index.css';
 
 type Project = {
@@ -12,6 +11,8 @@ type Project = {
     caption: string;
   }[];
 };
+
+const CV_PATH = '/Godfred-Mensah-CV.pdf';
 
 const projects: Project[] = [
   {
@@ -161,6 +162,7 @@ export default function App() {
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
@@ -185,11 +187,15 @@ export default function App() {
 
           <div className="hero-buttons">
             <a href="#projects" className="button primary">
-              Explore Projects
+              Explore My Work
             </a>
 
-            <a href="#contact" className="button secondary">
-              Get in Touch
+            <a
+              href={CV_PATH}
+              download="Godfred-Mensah-CV.pdf"
+              className="button secondary"
+            >
+              Download CV ↓
             </a>
           </div>
         </div>
@@ -320,7 +326,7 @@ export default function App() {
                         />
 
                         <span className="image-zoom">
-                          View image ↗
+                          View image ↗️
                         </span>
                       </div>
 
@@ -403,6 +409,7 @@ export default function App() {
           <div className="skills-grid">
             <article className="skill-group">
               <h3>Data &amp; Analysis</h3>
+
               <p>
                 Power BI, SQL (MySQL), Tableau, SPSS, and Advanced
                 Excel.
@@ -411,6 +418,7 @@ export default function App() {
 
             <article className="skill-group">
               <h3>Workflow &amp; Process Improvement</h3>
+
               <p>
                 Zapier, Make.com, workflow design, and administrative
                 process improvement.
@@ -419,6 +427,7 @@ export default function App() {
 
             <article className="skill-group">
               <h3>Research &amp; Data Collection</h3>
+
               <p>
                 Qualtrics, Zotero, survey design, field data
                 collection, and quantitative analysis.
@@ -427,6 +436,7 @@ export default function App() {
 
             <article className="skill-group">
               <h3>Web &amp; Digital Tools</h3>
+
               <p>
                 React, TypeScript, Tailwind CSS, VS Code, GitHub,
                 Vercel, and Supabase.
@@ -435,10 +445,45 @@ export default function App() {
 
             <article className="skill-group">
               <h3>Project &amp; Team Management</h3>
+
               <p>
                 Asana, Trello, Google Sheets, and Microsoft 365.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Resume Section */}
+      <section id="resume" className="section light-section">
+        <div className="container">
+          <div className="eyebrow">Curriculum Vitae</div>
+
+          <h2>My Professional Resume</h2>
+
+          <p className="projects-intro">
+            Explore my academic background, professional experience,
+            research interests, analytical skills, and technology
+            projects in greater detail.
+          </p>
+
+          <div className="hero-buttons">
+            <a
+              href={CV_PATH}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button secondary"
+            >
+              View CV ↗
+            </a>
+
+            <a
+              href={CV_PATH}
+              download="Godfred-Mensah-CV.pdf"
+              className="button primary"
+            >
+              Download CV ↓
+            </a>
           </div>
         </div>
       </section>
@@ -462,7 +507,7 @@ export default function App() {
               href="mailto:godfredmens78@gmail.com"
               className="contact-button email-button"
             >
-              Email Me ↗
+              Email Me ↗️
             </a>
 
             <a
@@ -471,7 +516,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="contact-button github-button"
             >
-              GitHub Profile ↗
+              GitHub Profile ↗️
             </a>
 
             <a
@@ -480,7 +525,15 @@ export default function App() {
               rel="noopener noreferrer"
               className="contact-button linkedin-button"
             >
-              LinkedIn Profile ↗
+              LinkedIn Profile ↗️
+            </a>
+
+            <a
+              href={CV_PATH}
+              download="Godfred-Mensah-CV.pdf"
+              className="contact-button cv-button"
+            >
+              Download My CV ↓
             </a>
           </div>
         </div>
