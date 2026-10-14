@@ -513,6 +513,7 @@ export default function App() {
               href={CV_PATH}
               target="_blank"
               rel="noopener noreferrer"
+              download="Godfred-Mensah-CV.pdf"
               className="button secondary"
             >
               View CV ↗️
