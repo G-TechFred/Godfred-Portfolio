@@ -148,6 +148,33 @@ const projects: Project[] = [
   },
 ];
 
+/* Reusable Browser Mockup Component */
+function BrowserMockup({ url, children }: { url: string; children: React.ReactNode }) {
+  return (
+    <div className="browser-mockup">
+      {/* Browser Header Bar */}
+      <div className="browser-header">
+        <div className="browser-dots">
+          <div className="browser-dot dot-red"></div>
+          <div className="browser-dot dot-yellow"></div>
+          <div className="browser-dot dot-green"></div>
+        </div>
+        
+        <div className="browser-url">
+          {url}
+        </div>
+        
+        <div style={{ width: '36px' }}></div>
+      </div>
+      
+      {/* Screen Content Area */}
+      <div className="browser-body">
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="app-container">
@@ -328,18 +355,21 @@ export default function App() {
                       aria-label={`Open ${image.caption} image for ${project.title}`}
                       key={image.src}
                     >
-                      <div className="gallery-image-wrapper">
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          loading="lazy"
-                          decoding="async"
-                        />
+                      {/* Wrapped Screenshot inside Browser Mockup */}
+                      <BrowserMockup url={`${project.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}.app`}>
+                        <div className="gallery-image-wrapper">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            loading="lazy"
+                            decoding="async"
+                          />
 
-                        <span className="image-zoom">
-                          View image ↗️
-                        </span>
-                      </div>
+                          <span className="image-zoom">
+                            View image ↗️
+                          </span>
+                        </div>
+                      </BrowserMockup>
 
                       <span className="gallery-image-caption">
                         <span className="image-number">
