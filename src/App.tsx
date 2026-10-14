@@ -13,6 +13,7 @@ type Project = {
 };
 
 const CV_PATH = '/Godfred-Mensah-CV.pdf';
+const PROFILE_IMAGE = '/Profile.jpg';
 
 const projects: Project[] = [
   {
@@ -171,6 +172,24 @@ export default function App() {
       {/* Hero Section */}
       <header id="home" className="hero">
         <div className="container hero-content">
+          {/* Personal Profile Photo */}
+          <div className="profile-photo-container">
+            <img
+              src={PROFILE_IMAGE}
+              alt="Godfred Mensah — Professional Profile"
+              className="profile-photo"
+              width={160}
+              height={160}
+              fetchPriority="high"
+              onError={(event) => {
+                console.error(
+                  'Profile photo could not be loaded. Check that public/Profile.jpg exists and the filename matches exactly.',
+                  event.currentTarget.src
+                );
+              }}
+            />
+          </div>
+
           <div className="eyebrow">Professional Portfolio</div>
 
           <h1>
@@ -188,14 +207,6 @@ export default function App() {
           <div className="hero-buttons">
             <a href="#projects" className="button primary">
               Explore My Work
-            </a>
-
-            <a
-              href={CV_PATH}
-              download="Godfred-Mensah-CV.pdf"
-              className="button secondary"
-            >
-              Download CV ↓
             </a>
           </div>
         </div>
@@ -474,15 +485,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="button secondary"
             >
-              View CV ↗
-            </a>
-
-            <a
-              href={CV_PATH}
-              download="Godfred-Mensah-CV.pdf"
-              className="button primary"
-            >
-              Download CV ↓
+              View CV ↗️
             </a>
           </div>
         </div>
@@ -527,14 +530,6 @@ export default function App() {
             >
               LinkedIn Profile ↗️
             </a>
-
-            <a
-              href={CV_PATH}
-              download="Godfred-Mensah-CV.pdf"
-              className="contact-button cv-button"
-            >
-              Download My CV ↓
-            </a>
           </div>
         </div>
       </section>
@@ -543,7 +538,7 @@ export default function App() {
       <footer className="footer">
         <div className="container">
           <p>
-            © {new Date().getFullYear()} Godfred Mensah. All rights
+            ©️ {new Date().getFullYear()} Godfred Mensah. All rights
             reserved.
           </p>
         </div>
