@@ -219,13 +219,13 @@ export default function App() {
           <div className="eyebrow">Professional Portfolio</div>
 
           <h1>
-            Education, Public Administration, Research
-            <span> &amp; Technology</span>
+            Education, Public Administration & Technology
+            <span></span>
           </h1>
 
           <p className="hero-description">
-            Education and business management professional with
-            experience in administrative analysis, research, data
+            Education and Administrative professional with
+            experience in research, data
             analysis, workflow automation and technology-enabled
             process improvement.
           </p>
@@ -305,8 +305,8 @@ export default function App() {
 
           <p className="projects-intro">
             Practical projects exploring how digital systems, data
-            analysis, and process improvement can support student
-            services, program evaluation, and better administrative
+            analysis and process improvement can support student
+            services, program evaluation and better administrative
             decisions.
           </p>
 
@@ -502,7 +502,7 @@ export default function App() {
 
           <p className="projects-intro">
             Explore my academic background, professional experience,
-            research interests, analytical skills, and technology
+            research interests, analytical skills and technology
             projects in greater detail.
           </p>
 
@@ -538,9 +538,9 @@ export default function App() {
 
           <p className="contact-text">
             I am interested in opportunities and collaborations
-            involving public administration, educational development,
-            research, program evaluation, data analysis, and
-            technology-enabled process improvement.
+            involving educational development, public administration,
+            student success, data-driven operations and using educational
+            technology to bridge administrative gaps.
           </p>
 
           <div className="contact-links">
