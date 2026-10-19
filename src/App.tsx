@@ -219,14 +219,14 @@ export default function App() {
           <div className="eyebrow">Professional Portfolio</div>
 
           <h1>
-            Public Administration, Research
-            <span> &amp; Data Technology</span>
+            Education, Public Administration, Research
+            <span> &amp; Technology</span>
           </h1>
 
           <p className="hero-description">
             Education and business management professional with
             experience in administrative analysis, research, data
-            analysis, workflow automation, and technology-enabled
+            analysis, workflow automation and technology-enabled
             process improvement.
           </p>
 
@@ -248,17 +248,13 @@ export default function App() {
           <div className="cards two-cards">
             <article className="card">
               <span className="card-label">
-                Oye Ride · Logistics and Mobility
+                BUILD the Company
               </span>
 
-              <h3>Growth Marketing Lead</h3>
+              <h3>Administrative Assistant</h3>
 
               <p>
-                Tracks daily user sign-ups and customer feedback to
-                understand customer preferences and identify areas
-                for improvement. Works with field teams on promotional
-                activities designed to increase app engagement,
-                registrations, and ride bookings.
+                Organizes internal office records and tracks operational workflow using digital tools to keep team project running smoothly. Manages data collection and entry to ensure accurate records for reports, projects tracking and company resources.
               </p>
             </article>
 
@@ -267,7 +263,7 @@ export default function App() {
                 Controller and Accountant-General&apos;s Department
               </span>
 
-              <h3>Administrative Analyst</h3>
+              <h3>Administrative Support</h3>
 
               <p>
                 Calculated complex pension benefits and maintained
@@ -580,7 +576,7 @@ export default function App() {
       <footer className="footer">
         <div className="container">
           <p>
-            © {new Date().getFullYear()} Godfred Mensah. All rights
+            ©️ {new Date().getFullYear()} Godfred Mensah. All rights
             reserved.
           </p>
         </div>
