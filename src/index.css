@@ -344,6 +344,9 @@ p {
 
 .projects-section {
   overflow: hidden;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(59, 130, 246, 0.08), transparent 34rem),
+    var(--surface-light);
 }
 
 .projects-intro {
@@ -371,10 +374,10 @@ p {
   flex-direction: column;
   padding: 24px;
   overflow: hidden;
-  border: 1px solid #e1e8f0;
-  border-radius: 16px;
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  border-radius: 20px;
   background: #ffffff;
-  box-shadow: 0 8px 28px rgba(15, 35, 65, 0.045);
+  box-shadow: 0 10px 32px rgba(15, 35, 65, 0.055);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -382,9 +385,9 @@ p {
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  border-color: #c8d9ef;
-  box-shadow: 0 16px 36px rgba(15, 35, 65, 0.09);
+  transform: translateY(-5px);
+  border-color: #b7cbea;
+  box-shadow: 0 20px 44px rgba(15, 35, 65, 0.11);
 }
 
 .project-heading {
@@ -407,6 +410,55 @@ p {
   margin-bottom: 20px;
   font-size: 0.94rem;
   line-height: 1.85;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 9px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.4;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-link span {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-dark);
+  background: var(--primary-dark);
+  box-shadow: 0 8px 18px rgba(16, 43, 77, 0.2);
+}
+
+.project-link:hover span {
+  transform: translate(2px, -2px);
+}
+
+.project-link:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.45);
+  outline-offset: 3px;
 }
 
 .project-card .technology-list {

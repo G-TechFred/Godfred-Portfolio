@@ -4,6 +4,10 @@ type Project = {
   status: string;
   title: string;
   description: string;
+  link: {
+    label: string;
+    href: string;
+  };
   technologies: string[];
   images: {
     src: string;
@@ -21,6 +25,10 @@ const projects: Project[] = [
     title: 'First-Year Student Mentorship & Peer Advising Platform',
     description:
       'Developing a digital platform designed to match first-year students with senior peer mentors based on academic majors and career interests. The platform is intended to support student onboarding, mentoring activities, and feedback collection through organized digital workflows.',
+    link: {
+      label: 'Quick Demo',
+      href: 'https://campus-connect-ten-tau.vercel.app/',
+    },
     technologies: ['Supabase', 'Web Workflows', 'Dashboards'],
     images: [
       {
@@ -50,6 +58,10 @@ const projects: Project[] = [
     title: 'Student Affairs Program Assessment & Feedback Pipeline',
     description:
       'Designed an assessment workflow for collecting and organizing student feedback after workshops and campus activities. The project demonstrates how survey responses, satisfaction measures, and reporting dashboards can support program review and evidence-informed administrative decisions.',
+    link: {
+      label: 'Test Feedback Form',
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSesj9pVo9MrkRTIuR7mMZD2Tlz_Q-yHTyqQjU1u_c2KpbEHPg/viewform?usp=publish-editor',
+    },
     technologies: [
       'Google Forms',
       'Google Sheets',
@@ -84,6 +96,10 @@ const projects: Project[] = [
     title: 'Automated Student Service Request Workflow',
     description:
       'Developed a student service request workflow using online forms and automation tools to capture requests and organize records for follow-up. The project explores how digital processes can reduce repetitive administrative tasks and improve request tracking, departmental coordination, and communication.',
+    link: {
+      label: 'Live Request Form',
+      href: 'https://cmt0jjy7m002iuog4b30r0qac.zapier.app/',
+    },
     technologies: [
       'Zapier',
       'Google Sheets',
@@ -117,6 +133,10 @@ const projects: Project[] = [
     title: 'Student Performance Tracking Application',
     description:
       'Building a web application for recording continuous assessments and term results using applicable Ghana Education Service grading standards. The application focuses on organizing student records and presenting performance summaries to support progress monitoring and informed educational decisions.',
+    link: {
+      label: 'Live Demo',
+      href: 'https://learning-lode-app.vercel.app/',
+    },
     technologies: [
       'React',
       'TypeScript',
@@ -327,6 +347,18 @@ export default function App() {
                 <p className="project-description">
                   {project.description}
                 </p>
+
+                <div className="project-actions">
+                  <a
+                    className="project-link"
+                    href={project.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.link.label}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
 
                 <div
                   className="technology-list"
