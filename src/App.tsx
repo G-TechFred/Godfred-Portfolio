@@ -102,6 +102,7 @@ const projects: Project[] = [
     },
     technologies: [
       'Zapier',
+      'Apps Script',
       'Google Sheets',
       'Workflow Automation',
     ],
@@ -141,7 +142,7 @@ const projects: Project[] = [
       'React',
       'TypeScript',
       'Tailwind CSS',
-      'Supabase',
+      'Firebase',
     ],
     images: [
       {
@@ -445,8 +446,8 @@ export default function App() {
               <p>
                 Completed undergraduate studies with a final-year
                 research project examining Business Management
-                teachers&apos; classroom management styles and
-                students&apos; engagement in the Cape Coast Metropolis.
+                Teachers&apos; classroom management styles and
+                Students&apos; Engagement in the Cape Coast Metropolis.
                 Used SPSS to support quantitative data analysis.
               </p>
             </article>
@@ -510,7 +511,7 @@ export default function App() {
 
               <p>
                 React, TypeScript, Tailwind CSS, VS Code, GitHub,
-                Vercel, and Supabase.
+                Vercel, Firebase and Supabase.
               </p>
             </article>
 
