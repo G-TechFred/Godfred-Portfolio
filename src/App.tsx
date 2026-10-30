@@ -208,8 +208,8 @@ export default function App() {
 
           <div className="nav-links">
             <a href="#about">About</a>
-            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
@@ -259,62 +259,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* Experience Section */}
-      <section id="experience" className="section">
-        <div className="container">
-          <div className="eyebrow">Experience</div>
-
-          <h2>Professional Background</h2>
-
-          <div className="cards two-cards">
-            <article className="card">
-              <span className="card-label">
-                BUILD the Company
-              </span>
-
-              <h3>Administrative Assistant</h3>
-
-              <p>
-                Organizes internal office records and tracks operational workflow using digital tools to keep team project running smoothly. Manages data collection and entry to ensure accurate records for reports, projects tracking and company resources.
-              </p>
-            </article>
-
-            <article className="card">
-              <span className="card-label">
-                Controller and Accountant-General&apos;s Department
-              </span>
-
-              <h3>Administrative Support</h3>
-
-              <p>
-                Calculated complex pension benefits and maintained
-                organized digital records for government pension
-                documentation. Reviewed supporting documents for
-                accuracy, tracked pending files, and supported
-                administrative follow-up and records management.
-              </p>
-            </article>
-
-            <article className="card">
-              <span className="card-label">
-                Ngleshie Amanfro Senior High
-              </span>
-
-              <h3>Applied Teaching Practicum</h3>
-
-              <p>
-                Delivered Business Management lessons using class
-                discussions and group activities to encourage student
-                participation. Organized classroom quizzes and tracked
-                student scores to identify learning needs and provide
-                targeted support.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
+      {/* Projects Section (Moved to the Top) */}
       <section
         id="projects"
         className="section light-section projects-section"
@@ -357,7 +302,7 @@ export default function App() {
                     rel="noopener noreferrer"
                   >
                     {project.link.label}
-                    <span aria-hidden="true">↗</span>
+                    <span aria-hidden="true">↗️</span>
                   </a>
                 </div>
 
@@ -424,6 +369,61 @@ export default function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="section">
+        <div className="container">
+          <div className="eyebrow">Experience</div>
+
+          <h2>Professional Background</h2>
+
+          <div className="cards two-cards">
+            <article className="card">
+              <span className="card-label">
+                BUILD the Company
+              </span>
+
+              <h3>Administrative Assistant</h3>
+
+              <p>
+                Organizes internal office records and tracks operational workflow using digital tools to keep team project running smoothly. Manages data collection and entry to ensure accurate records for reports, projects tracking and company resources.
+              </p>
+            </article>
+
+            <article className="card">
+              <span className="card-label">
+                Controller and Accountant-General&apos;s Department
+              </span>
+
+              <h3>Administrative Support</h3>
+
+              <p>
+                Calculated complex pension benefits and maintained
+                organized digital records for government pension
+                documentation. Reviewed supporting documents for
+                accuracy, tracked pending files, and supported
+                administrative follow-up and records management.
+              </p>
+            </article>
+
+            <article className="card">
+              <span className="card-label">
+                Ngleshie Amanfro Senior High
+              </span>
+
+              <h3>Applied Teaching Practicum</h3>
+
+              <p>
+                Delivered Business Management lessons using class
+                discussions and group activities to encourage student
+                participation. Organized classroom quizzes and tracked
+                student scores to identify learning needs and provide
+                targeted support.
+              </p>
+            </article>
           </div>
         </div>
       </section>
