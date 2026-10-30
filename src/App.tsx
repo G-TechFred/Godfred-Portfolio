@@ -21,7 +21,7 @@ const PROFILE_IMAGE = '/Profile.jpg';
 
 const projects: Project[] = [
   {
-    status: 'In Development',
+    status: 'Completed',
     title: 'First-Year Student Mentorship & Peer Advising Platform',
     description:
       'Developing a digital platform designed to match first-year students with senior peer mentors based on academic majors and career interests. The platform is intended to support student onboarding, mentoring activities, and feedback collection through organized digital workflows.',
@@ -130,7 +130,7 @@ const projects: Project[] = [
     ],
   },
   {
-    status: 'In Development',
+    status: 'Completed',
     title: 'Student Performance Tracking Application',
     description:
       'Building a web application for recording continuous assessments and term results using applicable Ghana Education Service grading standards. The application focuses on organizing student records and presenting performance summaries to support progress monitoring and informed educational decisions.',
