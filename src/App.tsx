@@ -8,6 +8,10 @@ type Project = {
     label: string;
     href: string;
   };
+  secondaryLink?: {
+    label: string;
+    href: string;
+  };
   technologies: string[];
   images: {
     src: string;
@@ -24,12 +28,17 @@ const projects: Project[] = [
     status: 'Completed',
     title: 'First-Year Student Mentorship & Peer Advising Platform',
     description:
-      'Developing a digital platform designed to match first-year students with senior peer mentors based on academic majors and career interests. The platform is intended to support student onboarding, mentoring activities, and feedback collection through organized digital workflows.',
+      'Developed a peer mentorship initiative designed to help first-year students adjust to university life through structured guidance and support from senior students. The initiative focuses on student transition, academic adjustment, peer relationships and access to campus resources. It provides a framework for matching students with mentors based on academic interests and career goals while supporting mentorship coordination, student engagement and feedback to strengthen the overall student experience.',
     link: {
       label: 'Quick Demo',
       href: 'https://campus-connect-ten-tau.vercel.app/',
     },
-    technologies: ['Supabase', 'Web Workflows', 'Dashboards'],
+    technologies: [
+      'Peer Mentorship',
+      'Student Development',
+      'Student Support',
+      'Student Engagement',
+    ],
     images: [
       {
         src: '/mentorship-dashboard.jpg',
@@ -57,16 +66,20 @@ const projects: Project[] = [
     status: 'Completed',
     title: 'Student Affairs Program Assessment & Feedback Pipeline',
     description:
-      'Designed an assessment workflow for collecting and organizing student feedback after workshops and campus activities. The project demonstrates how survey responses, satisfaction measures, and reporting dashboards can support program review and evidence-informed administrative decisions.',
+      'Developed a structured feedback process to gather and review students experiences after workshops, campus activities and student support programs. The project focuses on understanding student satisfaction, identifying areas for improvement and using student feedback to inform future program planning. It demonstrates how systematic feedback collection and program assessment can help student affairs professionals evaluate activities, respond to student needs and improve the overall campus experience.',
     link: {
-      label: 'Test Feedback Form',
+      label: 'View Student Feedback Form',
       href: 'https://docs.google.com/forms/d/e/1FAIpQLSesj9pVo9MrkRTIuR7mMZD2Tlz_Q-yHTyqQjU1u_c2KpbEHPg/viewform?usp=publish-editor',
     },
+    secondaryLink: {
+      label: 'Live Dashboard',
+      href: 'https://datastudio.google.com/u/0/reporting/6d23ebc7-8a2c-4b07-9d4c-b915cc16c662?s=qiiQ-jHM3V8',
+    },
     technologies: [
-      'Google Forms',
-      'Google Sheets',
+      'Student Engagement',
+      'Program Evaluation',
+      'Student Feedback',
       'Looker Studio',
-      'Apps Script',
     ],
     images: [
       {
@@ -95,16 +108,16 @@ const projects: Project[] = [
     status: 'Completed',
     title: 'Automated Student Service Request Workflow',
     description:
-      'Developed a student service request workflow using online forms and automation tools to capture requests and organize records for follow-up. The project explores how digital processes can reduce repetitive administrative tasks and improve request tracking, departmental coordination, and communication.',
+      'Created a digital service request workflow to help student support offices handle requests and respond to students much faster. Tested the system with 14 users to see how automated tracking can improve student services, reduce office delays, and streamline departmental communication.',
     link: {
       label: 'Live Request Form',
       href: 'https://cmt0jjy7m002iuog4b30r0qac.zapier.app/',
     },
     technologies: [
-      'Zapier',
-      'Apps Script',
-      'Google Sheets',
-      'Workflow Automation',
+      'System Integration',
+      'Administration',
+      'Student Services',
+      'Process Optimization',
     ],
     images: [
       {
@@ -133,16 +146,16 @@ const projects: Project[] = [
     status: 'Completed',
     title: 'Student Performance Tracking Application',
     description:
-      'Building a web application for recording continuous assessments and term results using applicable Ghana Education Service grading standards. The application focuses on organizing student records and presenting performance summaries to support progress monitoring and informed educational decisions.',
+      'Built a web application to help educators record continuous assessments and term results to monitor student progress. The platform helps organize student records, track academic milestones, and support data-driven student success and retention initiatives.',
     link: {
       label: 'Live Demo',
       href: 'https://learning-lode-app.vercel.app/',
     },
     technologies: [
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'Firebase',
+      'Assessment',
+      'Progress Monitoring',
+      'Evaluation',
+      'Records Management',
     ],
     images: [
       {
@@ -181,16 +194,13 @@ function BrowserMockup({
     <div className="browser-mockup">
       <div className="browser-header">
         <div className="browser-dots">
-          <div className="browser-dot dot-red"></div>
-          <div className="browser-dot dot-yellow"></div>
-          <div className="browser-dot dot-green"></div>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-
         <div className="browser-url">{url}</div>
-
         <div style={{ width: '36px' }}></div>
       </div>
-
       <div className="browser-body">{children}</div>
     </div>
   );
@@ -198,14 +208,13 @@ function BrowserMockup({
 
 export default function App() {
   return (
-    <div className="app-container">
+    <div className="portfolio-app">
       {/* Navigation */}
       <nav className="navbar">
-        <div className="container nav-content">
+        <div className="container nav-container">
           <a href="#home" className="logo">
             Godfred Mensah
           </a>
-
           <div className="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -236,21 +245,16 @@ export default function App() {
               }}
             />
           </div>
-
           <div className="eyebrow">Professional Portfolio</div>
-
           <h1>
             Education, Public Administration & Technology
             <span></span>
           </h1>
-
           <p className="hero-description">
-            Education and Administrative professional with
-            experience in research, data
-            analysis, workflow automation and technology-enabled
+            Education and Administrative professional with experience in
+            research, data analysis, workflow automation and technology-enabled
             process improvement.
           </p>
-
           <div className="hero-buttons">
             <a href="#projects" className="button primary">
               Explore My Work
@@ -259,41 +263,25 @@ export default function App() {
         </div>
       </header>
 
-      {/* Projects Section (Moved to the Top) */}
-      <section
-        id="projects"
-        className="section light-section projects-section"
-      >
+      {/* Projects Section */}
+      <section id="projects" className="section light-section projects-section">
         <div className="container">
           <div className="eyebrow">Selected Work</div>
-
           <h2>Projects in Administration, Research &amp; Technology</h2>
-
           <p className="projects-intro">
-            Practical projects exploring how digital systems, data
-            analysis and process improvement can support student
-            services, program evaluation and better administrative
-            decisions.
+            Practical projects exploring how digital systems, data analysis and
+            process improvement can support student services, program
+            evaluation and better administrative decisions.
           </p>
-
           <div className="project-grid">
             {projects.map((project, index) => (
-              <article
-                className="card project-card"
-                key={project.title}
-              >
+              <article className="card project-card" key={project.title}>
                 <div className="project-heading">
-                  <span className="card-label">
-                    {project.status}
-                  </span>
-
+                  <span className="card-label">{project.status}</span>
                   <h3>{project.title}</h3>
                 </div>
-
-                <p className="project-description">
-                  {project.description}
-                </p>
-
+                <p className="project-description">{project.description}</p>
+                {/* Project Links */}
                 <div className="project-actions">
                   <a
                     className="project-link"
@@ -304,8 +292,18 @@ export default function App() {
                     {project.link.label}
                     <span aria-hidden="true">↗️</span>
                   </a>
+                  {project.secondaryLink && (
+                    <a
+                      className="project-link"
+                      href={project.secondaryLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.secondaryLink.label}
+                      <span aria-hidden="true">↗️</span>
+                    </a>
+                  )}
                 </div>
-
                 <div
                   className="technology-list"
                   aria-label="Project technologies"
@@ -314,7 +312,6 @@ export default function App() {
                     <span key={technology}>{technology}</span>
                   ))}
                 </div>
-
                 <div
                   className="project-gallery"
                   aria-label={`${project.title} screenshots`}
@@ -340,29 +337,22 @@ export default function App() {
                             loading="lazy"
                             decoding="async"
                           />
-
-                          <span className="image-zoom">
-                            View image ↗️
-                          </span>
+                          <span className="image-zoom">View image ↗️</span>
                         </div>
                       </BrowserMockup>
-
                       <span className="gallery-image-caption">
                         <span className="image-number">
                           {String(imageIndex + 1).padStart(2, '0')}
                         </span>
-
                         {image.caption}
                       </span>
                     </a>
                   ))}
                 </div>
-
                 <div className="project-footer">
                   <span className="project-number">
                     PROJECT {String(index + 1).padStart(2, '0')}
                   </span>
-
                   <span className="project-image-count">
                     {project.images.length} screenshots
                   </span>
@@ -377,51 +367,38 @@ export default function App() {
       <section id="experience" className="section">
         <div className="container">
           <div className="eyebrow">Experience</div>
-
           <h2>Professional Background</h2>
-
           <div className="cards two-cards">
             <article className="card">
-              <span className="card-label">
-                BUILD the Company
-              </span>
-
+              <span className="card-label">BUILD the Company</span>
               <h3>Administrative Assistant</h3>
-
               <p>
-                Organizes internal office records and tracks operational workflow using digital tools to keep team project running smoothly. Manages data collection and entry to ensure accurate records for reports, projects tracking and company resources.
+                Organizes internal office records and tracks operational
+                workflow using digital tools to keep team project running
+                smoothly. Manages data collection and entry to ensure accurate
+                records for reports, projects tracking and company resources.
               </p>
             </article>
-
             <article className="card">
               <span className="card-label">
                 Controller and Accountant-General&apos;s Department
               </span>
-
               <h3>Administrative Support</h3>
-
               <p>
-                Calculated complex pension benefits and maintained
-                organized digital records for government pension
-                documentation. Reviewed supporting documents for
-                accuracy, tracked pending files, and supported
-                administrative follow-up and records management.
+                Calculated complex pension benefits and maintained organized
+                digital records for government pension documentation. Reviewed
+                supporting documents for accuracy, tracked pending files, and
+                supported administrative follow-up and records management.
               </p>
             </article>
-
             <article className="card">
-              <span className="card-label">
-                Ngleshie Amanfro Senior High
-              </span>
-
+              <span className="card-label">Ngleshie Amanfro Senior High</span>
               <h3>Applied Teaching Practicum</h3>
-
               <p>
-                Delivered Business Management lessons using class
-                discussions and group activities to encourage student
-                participation. Organized classroom quizzes and tracked
-                student scores to identify learning needs and provide
-                targeted support.
+                Delivered Business Management lessons using class discussions
+                and group activities to encourage student participation. Organized
+                classroom quizzes and tracked student scores to identify learning
+                needs and provide targeted support.
               </p>
             </article>
           </div>
@@ -432,39 +409,26 @@ export default function App() {
       <section id="about" className="section">
         <div className="container">
           <div className="eyebrow">Background</div>
-
           <h2>Education &amp; Research Experience</h2>
-
           <div className="cards two-cards">
             <article className="card">
-              <span className="card-label">
-                University of Cape Coast
-              </span>
-
+              <span className="card-label">University of Cape Coast</span>
               <h3>Bachelor of Education in Business Management</h3>
-
               <p>
-                Completed undergraduate studies with a final-year
-                research project examining Business Management
-                Teachers&apos; classroom management styles and
-                Students&apos; Engagement in the Cape Coast Metropolis.
-                Used SPSS to support quantitative data analysis.
+                Completed undergraduate studies with a final-year research
+                project examining Business Management Teachers&apos; classroom
+                management styles and Students&apos; Engagement in the Cape Coast
+                Metropolis. Used SPSS to support quantitative data analysis.
               </p>
             </article>
-
             <article className="card">
-              <span className="card-label">
-                U-Splash Mineral Water Company
-              </span>
-
+              <span className="card-label">U-Splash Mineral Water Company</span>
               <h3>Organizational Performance Review</h3>
-
               <p>
-                Conducted an organizational diagnostic field study
-                examining sales management issues. Organized records
-                in Excel, developed Tableau visualizations to examine
-                sales trends, and proposed practical performance
-                improvement strategies.
+                Conducted an organizational diagnostic field study examining
+                sales management issues. Organized records in Excel, developed
+                Tableau visualizations to examine sales trends, and proposed
+                practical performance improvement strategies.
               </p>
             </article>
           </div>
@@ -475,52 +439,36 @@ export default function App() {
       <section id="skills" className="section light-section">
         <div className="container">
           <div className="eyebrow">Expertise</div>
-
           <h2>Analytical, Research &amp; Technology Skills</h2>
-
           <div className="skills-grid">
             <article className="skill-group">
-              <h3>Data &amp; Analysis</h3>
-
+              <h3>Institutional Research &amp; Data Analytics</h3>
+              <p>Power BI, SQL (MySQL), Tableau, SPSS, and Advanced Excel.</p>
+            </article>
+            <article className="skill-group">
+              <h3>Administrative Operations &amp; Process Optimization</h3>
               <p>
-                Power BI, SQL (MySQL), Tableau, SPSS, and Advanced
-                Excel.
+                Zapier, Make.com, workflow design, and administrative process
+                improvement.
               </p>
             </article>
-
             <article className="skill-group">
-              <h3>Workflow &amp; Process Improvement</h3>
-
+              <h3>Program Evaluation &amp; Survey Methodology</h3>
               <p>
-                Zapier, Make.com, workflow design, and administrative
-                process improvement.
+                Qualtrics, Zotero, survey design, field data collection, and
+                quantitative analysis.
               </p>
             </article>
-
             <article className="skill-group">
-              <h3>Research &amp; Data Collection</h3>
-
+              <h3>Educational Technology &amp; Digital Support Systems</h3>
               <p>
-                Qualtrics, Zotero, survey design, field data
-                collection, and quantitative analysis.
+                React, TypeScript, Tailwind CSS, VS Code, GitHub, Vercel,
+                Firebase and Supabase.
               </p>
             </article>
-
             <article className="skill-group">
-              <h3>Web &amp; Digital Tools</h3>
-
-              <p>
-                React, TypeScript, Tailwind CSS, VS Code, GitHub,
-                Vercel, Firebase and Supabase.
-              </p>
-            </article>
-
-            <article className="skill-group">
-              <h3>Project &amp; Team Management</h3>
-
-              <p>
-                Asana, Trello, Google Sheets, and Microsoft 365.
-              </p>
+              <h3>Student Program Coordination &amp; Collaboration</h3>
+              <p>Asana, Trello, Google Sheets, and Microsoft 365.</p>
             </article>
           </div>
         </div>
@@ -530,17 +478,13 @@ export default function App() {
       <section id="resume" className="section light-section">
         <div className="container">
           <div className="eyebrow">Curriculum Vitae</div>
-
           <h2>My Professional Resume</h2>
-
           <p className="projects-intro">
-            Explore my academic background, professional experience,
-            research interests, analytical skills and technology
-            projects in greater detail.
+            Explore my academic background, institutional experience, research
+            interests, assessment skills and student support projects in greater
+            detail.
           </p>
-
           <div className="hero-buttons">
-            {/* View CV in a new browser tab */}
             <a
               href={CV_PATH}
               target="_blank"
@@ -549,8 +493,6 @@ export default function App() {
             >
               View CV ↗️
             </a>
-
-            {/* Download the original PDF file */}
             <a
               href={CV_PATH}
               download="Godfred-Mensah-CV.pdf"
@@ -566,16 +508,13 @@ export default function App() {
       <section id="contact" className="section contact-section">
         <div className="container">
           <div className="eyebrow">Connect</div>
-
           <h2>Let&apos;s Build Something Meaningful</h2>
-
           <p className="contact-text">
-            I am interested in opportunities and collaborations
-            involving educational development, public administration,
-            student success, data-driven operations and using educational
-            technology to bridge administrative gaps.
+            I am interested in opportunities and collaborations involving
+            educational development, public administration, student success,
+            data-driven operations and using educational technology to bridge
+            administrative gaps.
           </p>
-
           <div className="contact-links">
             <a
               href="mailto:godfredmens78@gmail.com"
@@ -583,7 +522,6 @@ export default function App() {
             >
               Email Me ↗️
             </a>
-
             <a
               href="https://github.com/G-TechFred"
               target="_blank"
@@ -592,7 +530,6 @@ export default function App() {
             >
               GitHub Profile ↗️
             </a>
-
             <a
               href="https://www.linkedin.com/in/godfred-mensah1"
               target="_blank"
@@ -609,8 +546,7 @@ export default function App() {
       <footer className="footer">
         <div className="container">
           <p>
-            ©️ {new Date().getFullYear()} Godfred Mensah. All rights
-            reserved.
+            ©️ {new Date().getFullYear()} Godfred Mensah. All rights reserved.
           </p>
         </div>
       </footer>
